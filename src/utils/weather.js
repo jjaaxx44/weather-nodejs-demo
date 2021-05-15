@@ -14,7 +14,8 @@ const getWeather = (cordinates, callback) => {
             const currentWeather = body.current
             const weatherData = {
                 temperature: currentWeather.temperature,
-                descriptions: currentWeather.weather_descriptions[0]
+                descriptions: currentWeather.weather_descriptions[0],
+                humidity: currentWeather.humidity
             }
             callback(undefined, weatherData)
         }

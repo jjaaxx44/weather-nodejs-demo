@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
                 return
             }
             message1.textContent = data.location
-            message2.textContent = 'Current temprature is ' + data.temperature + ' with ' + data.descriptions
+            message2.textContent = 'Current temprature is ' + data.temperature + ' with ' + data.descriptions + '. Humidity is ' + data.humidity
         })
     })    
 })

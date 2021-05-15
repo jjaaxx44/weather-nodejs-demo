@@ -58,7 +58,7 @@ app.get('/weather', (req, res) => {
                 return res.send({ error })
             }
             const cordinates = lattitube + ',' + longitude
-            weather.getWeather(cordinates, (error, { temperature, descriptions } = {}) => {
+            weather.getWeather(cordinates, (error, { temperature, descriptions, humidity } = {}) => {
                 if (error) {
                     return res.send({ error })
                 } else {
@@ -66,7 +66,8 @@ app.get('/weather', (req, res) => {
                         location,
                         address,
                         temperature,
-                        descriptions
+                        descriptions,
+                        humidity
                     })
                 }
             })
