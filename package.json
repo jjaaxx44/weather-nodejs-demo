@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs,css",
+    "_comment": "dev will only run locally as nodemon is global pkg. To run dev on different system nodemon needs to be installed locally. npm install nodemon --save-dev"
   },
   "keywords": [],
   "author": "",
