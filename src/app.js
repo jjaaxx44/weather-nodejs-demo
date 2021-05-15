@@ -2,8 +2,10 @@ const chalk = require('chalk')
 const express = require('express')
 const hbs = require('hbs')
 const path = require('path')
-const geocode = require('./utils/geocode');
-const weather = require('./utils/weather');
+const geocode = require('./utils/geocode')
+const weather = require('./utils/weather')
+
+const port = process.env.PORT || 3000
 
 const log = console.log
 
@@ -88,6 +90,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    log('server is up on 3000')
+app.listen(port, () => {
+    log('server is up on ' + port)
 })
